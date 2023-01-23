@@ -51,11 +51,6 @@ class Telephone:
         ...
 
 
-if __name__ == "__main__":
-    doctest.testmod()  # тестирование примеров, которые находятся в документации
-    pass
-
-
 class SavingsAccount:
     def __init__(self, accumulation: int):
         """
@@ -109,11 +104,6 @@ class SavingsAccount:
         if withdrawals <= 0:
             raise ValueError("Сумма снятия должна быть положительным числом ")
         ...
-
-
-if __name__ == "__main__":
-    doctest.testmod()  # тестирование примеров, которые находятся в документации
-    pass
 
 
 class University:
