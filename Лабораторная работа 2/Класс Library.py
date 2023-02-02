@@ -14,7 +14,7 @@ BOOKS_DATABASE = [
 
 class Book:
     def __init__(self, id_: int, name: str, pages:  int):
-        self.id_ = id_
+        self.id = id_
         self.name = name
         self.pages = pages
 
@@ -30,11 +30,11 @@ class Library:
         if not self.books:
             return 1
         else:
-            return self.books[-1].id_ + 1
+            return self.books[-1].id + 1
 
-    def get_index_by_book_id(self, id_):
+    def get_index_by_book_id(self, id_) -> int:
         for index, value in enumerate(self.books):
-            if value.id_ == id_:
+            if value.id == id_:
                 return index
         raise ValueError("Книги с запрашиваемым id не существует")
 
