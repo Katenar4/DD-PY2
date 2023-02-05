@@ -50,3 +50,4 @@ class AudioBook(Book):
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, duration={self.duration!r})"
+
