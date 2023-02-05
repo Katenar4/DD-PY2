@@ -44,6 +44,7 @@ class AudioBook(Book):
             raise ValueError
         self.duration = duration
 
+
     def __str__(self) -> str:
         return f"Книга {self._name}. Автор {self._author}. Продолжительность: {self.duration}"
 
