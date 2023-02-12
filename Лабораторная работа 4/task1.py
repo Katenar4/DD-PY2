@@ -43,14 +43,13 @@ if __name__ == "__main__":
             :param regular_customer: Является ли клиент постоянным
             """
             super().__init__(name, address, months, monthly_cost)
+            if regular_customer is not True:
+                raise ValueError("Клиент не является постоянным")
             self.regular_customer = regular_customer
 
         def __str__(self) -> str:
-            if self.regular_customer:
-                return f"Клиент: {self.name}. Адресс: Фитнес-дом.{self._address}. Длительность: {self.months}. " \
+            return f"Клиент: {self.name}. Адресс: Фитнес-дом.{self._address}. Длительность: {self.months}. " \
                        f"Постоянный клиент "
-            else:
-                return f"Клиент: {self.name}. Адресс: Фитнес-дом.{self._address}. Длительность: {self.months}"
 
         def __repr__(self):
             return f"{self.__class__.__name__}(name={self.name!r}, address={self._address!r}, months={self.months}, " \
@@ -67,3 +66,4 @@ if __name__ == "__main__":
 
             return super().price() * (100 - discount) / 100
 pass
+
